@@ -1,0 +1,17 @@
+{
+  "name": "codebuild-demo-project",
+  "source": {
+    "type": "S3",
+    "location": "codebuild-us-east-1-906610514295-input-bucket/MessageUtil.zip"
+  },
+  "artifacts": {
+    "type": "S3",
+    "location": "codebuild-us-east-1-906610514295-output-bucket"
+  },
+  "environment": {
+    "type": "LINUX_CONTAINER",
+    "image": "aws/codebuild/amazonlinux2-x86_64-standard:2.0",
+    "computeType": "BUILD_GENERAL1_SMALL"
+  },
+  "serviceRole": "arn:aws:iam::906610514295:role/CodeBuildServiceRole"
+}

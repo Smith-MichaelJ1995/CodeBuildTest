@@ -1,0 +1,54 @@
+{
+    "build": {
+        "id": "codebuild-demo-project:deed8ba2-1d63-4c09-a5e4-699a368dc7c7",
+        "arn": "arn:aws:codebuild:us-east-1:906610514295:build/codebuild-demo-project:deed8ba2-1d63-4c09-a5e4-699a368dc7c7",
+        "buildNumber": 1,
+        "startTime": "2020-04-08T14:41:37.622000-04:00",
+        "currentPhase": "QUEUED",
+        "buildStatus": "IN_PROGRESS",
+        "projectName": "codebuild-demo-project",
+        "phases": [
+            {
+                "phaseType": "SUBMITTED",
+                "phaseStatus": "SUCCEEDED",
+                "startTime": "2020-04-08T14:41:37.622000-04:00",
+                "endTime": "2020-04-08T14:41:37.902000-04:00",
+                "durationInSeconds": 0
+            },
+            {
+                "phaseType": "QUEUED",
+                "startTime": "2020-04-08T14:41:37.902000-04:00"
+            }
+        ],
+        "source": {
+            "type": "S3",
+            "location": "codebuild-us-east-1-906610514295-input-bucket/MessageUtil.zip",
+            "insecureSsl": false
+        },
+        "artifacts": {
+            "location": "arn:aws:s3:::codebuild-us-east-1-906610514295-output-bucket/codebuild-demo-project",
+            "encryptionDisabled": false
+        },
+        "cache": {
+            "type": "NO_CACHE"
+        },
+        "environment": {
+            "type": "LINUX_CONTAINER",
+            "image": "aws/codebuild/amazonlinux2-x86_64-standard:2.0",
+            "computeType": "BUILD_GENERAL1_SMALL",
+            "environmentVariables": [],
+            "privilegedMode": false,
+            "imagePullCredentialsType": "CODEBUILD"
+        },
+        "serviceRole": "arn:aws:iam::906610514295:role/CodeBuildServiceRole",
+        "logs": {
+            "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logEvent:group=null;stream=null",
+            "cloudWatchLogsArn": "arn:aws:logs:us-east-1:906610514295:log-group:null:log-stream:null"
+        },
+        "timeoutInMinutes": 60,
+        "queuedTimeoutInMinutes": 480,
+        "buildComplete": false,
+        "initiator": "michael.joshua.smith",
+        "encryptionKey": "arn:aws:kms:us-east-1:906610514295:alias/aws/s3"
+    }
+}
